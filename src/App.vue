@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <b-container id="app">
+    <b-row>
+      <b-col class="mb-5">
+        <b-row><h1 class="main-header">Forex Exchange</h1> </b-row>
+        <b-row
+          ><h2 class="sub-header">
+            Checkout the current price on different exchanges for currency pair
+          </h2>
+        </b-row>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <priceChecker />
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import priceChecker from "./components/priceChecker.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    priceChecker,
+  },
+};
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Lato", sans-serif;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.main-header {
+  font-weight: bolder;
+  font-size: 6vw;
+}
+.sub-header {
+  font-weight: bold;
+  font-size: 2vw;
+  color: gray;
 }
 </style>
